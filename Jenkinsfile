@@ -1,5 +1,3 @@
-
-@'
 pipeline {
     agent any
 
@@ -12,7 +10,7 @@ pipeline {
 
         stage('Setup Python Environment') {
             steps {
-                bat '"C:/Users/DS_USER/AppData/Local/Programs/Python/Python311/python.exe" -m venv .venv'
+                bat '"C:\\Users\\DS_USER\\AppData\\Local\\Programs\\Python\\Python311\\python.exe" -m venv .venv'
                 bat '.venv\\Scripts\\python.exe -m pip install -r requirements.txt'
             }
         }
@@ -36,4 +34,3 @@ pipeline {
         }
     }
 }
-'@ | Set-Content -Encoding ascii Jenkinsfile
